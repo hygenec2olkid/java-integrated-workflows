@@ -3,6 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -13,7 +14,7 @@ class NoteTest {
 	void initialNoteShouldBeEmpty() {
 		TextFile textFile = mock(TextFile.class);
 		when(textFile.read(any())).thenReturn("");
-		Note note = new Note(textFile);
+			Note note = new Note(textFile);
 
 		String expected = "";
 		String actual = note.read();
